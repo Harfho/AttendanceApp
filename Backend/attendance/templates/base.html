@@ -20,10 +20,8 @@
       <div class="row justify-content-center">
       <div class="col-9 text-right">
               {% if user.is_authenticated %}
-                <p class="pt-3">Logged in as <strong>{{ user.username }}</strong>. <a href="{% url 'logout' %}">Log out</a>.</p>
-              {% else %}
-                <a href="{% url 'login' %}" class="btn btn-light" role="button">Log in</a>
-                <a href="{% url 'signup' %}" class="btn btn-primary" role="button">Sign up</a>
+                <p class="pt-3">Logged in as <strong>{{ user.username }}</strong>.
+                  <a class="btn btn-lg btn-success" role="button" href="{% url 'logout' %}">Log out</a>.</p>
               {% endif %}
             </div>
         <div class="col-md-10 col-sm-12">
